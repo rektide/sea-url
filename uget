@@ -1,5 +1,5 @@
 #!/bin/bash
-for (( i=1; i<=$#; i++ )); do
-	FILENAME=$(urlize "${!i}")
-	seaurli "${FILENAME}"
+for url; do
+	filename=$(urlize "$url")
+	seaurli "${filename}"
 done
