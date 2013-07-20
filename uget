@@ -1,5 +1,7 @@
 #!/bin/bash
+urlfiles=()
 for url; do
 	filename=$(urlize "$url")
-	seaurli "${filename}"
+	urlfiles+=("$filename")
 done
+seaurli "${urlfiles[@]}"
